@@ -16,16 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: MyWidget(),
+          child: MyApp(),
         ),
       ),
     );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Text('rpgdemo');
   }
 }

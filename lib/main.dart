@@ -26,9 +26,6 @@ class MyApp extends StatelessWidget {
 class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Hello, World!',
-      style: Theme.of(context).textTheme.headlineMedium,
-    );
+    return Text('rpgdemo');
   }
 }

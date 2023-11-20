@@ -4,6 +4,9 @@ class InitialScreen extends StatelessWidget {
   @override
 
   Widget build(BuildContext context) {
-    return const Text('rpgdemo');
+    return Scaffold(
+      body: 
+      Padding(padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size*0.2;)),
+    );
   }
 }

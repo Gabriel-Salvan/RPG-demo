@@ -13,7 +13,7 @@ class InitialScreen extends StatelessWidget {
                 maxLines: 1, 
                 style: TextStyle(
                   fontWeight: FontWeight.bold, 
-                  color: Colors.black12, 
+                  color: Colors.white10, 
                   fontSize: MediaQuery.of(context).size.width*0.2),)),
     );
   }

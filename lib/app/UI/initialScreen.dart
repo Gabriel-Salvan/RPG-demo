@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatelessWidget {
+  const InitialScreen({super.key});
+
   @override
 
   Widget build(BuildContext context) {
     return Scaffold(
       body: 
-      Padding(padding: EdgeInsets.only(left:MediaQuery.of(context).size*0.2;,right:MediaQuery.of(context).size*0.2;,bottom:MediaQuery.of(context).size*0.2;,top:MediaQuery.of(context).size*0.2; ),
+      Padding(padding: EdgeInsets.symmetric(horizontal:MediaQuery.of(context).size.width*0.2, vertical:MediaQuery.of(context).size.height*0.03),
               child: Text("Welcome", 
                 maxLines: 1, 
-                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black12),)),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold, 
+                  color: Colors.black12, 
+                  fontSize: MediaQuery.of(context).size.width*0.2),)),
     );
   }
 }

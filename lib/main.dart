@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-const Color darkBlue = Color.fromARGB(255, 79, 78, 97);
+import 'package:rpgdemo/app/UI/initialScreen.dart';
+
+const Color darkBlue = Color.fromARGB(255, 0, 52, 89);
 
 void main() {
   runApp(const MyApp());

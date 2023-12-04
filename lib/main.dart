@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:rpgdemo/app/UI/initialScreen.dart';
+import 'app/UI/initialScreen.dart';
 
 const Color darkBlue = Color.fromARGB(255, 0, 52, 89);
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
         body: Center(
-          child: MyApp(),
+          child: InitialScreen(),
         ),
       ),
     );

@@ -13,32 +13,34 @@ class InitialScreen extends StatelessWidget {
       Column(children:[
           Padding(
               padding: EdgeInsets.symmetric(
-                horizontal:MediaQuery.of(context).size.width*0.2, 
+                horizontal:MediaQuery.of(context).size.width*0.1, 
                 vertical:MediaQuery.of(context).size.height*0.03),
               child: Text("Welcome", 
                 maxLines: 1, 
                 style: TextStyle(
                   fontWeight: FontWeight.bold, 
                   color: Colors.white10, 
-                  fontSize: MediaQuery.of(context).size.width*0.2),)),
+                  fontSize: MediaQuery.of(context).size.width*0.1),)),
           Padding(
               padding: EdgeInsets.only(
                 left:MediaQuery.of(context).size.width * 0.2,
-                top:MediaQuery.of(context).size.height * 0.1,
+                top:MediaQuery.of(context).size.height * 0.3,
                 right:MediaQuery.of(context).size.width * 0.2),
-              child: Container(
-                color: const Color.fromARGB(255, 35, 38, 49),
-                padding: EdgeInsets.symmetric(
-                  vertical: MediaQuery.of(context).size.height * 0.02,
-                  horizontal: MediaQuery.of(context).size.width * 0.05),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width*0.02),
+                child:Container(
+                  color: const Color.fromARGB(255, 35, 38, 49),
+                  padding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height * 0.02,
+                    horizontal: MediaQuery.of(context).size.width * 0.02),
                 child: TextField(
                   maxLines: 1,
                   decoration: const InputDecoration(
                     labelText: ('Whats your name adventurer?')),
                   style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width * 0.05,
+                    fontSize: MediaQuery.of(context).size.width * 0.02,
                     fontStyle: FontStyle.italic,
-                    color: const Color.fromARGB(255, 255, 255, 255) ),),),),
+                    color: const Color.fromARGB(255, 255, 255, 255) ),),),)),
           Padding(
               padding: EdgeInsets.symmetric(
                 vertical: MediaQuery.of(context).size.height * 0.02,

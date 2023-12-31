@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import 'dialogScreen.dart';
@@ -19,7 +20,7 @@ class InitialScreen extends StatelessWidget {
                 maxLines: 1, 
                 style: TextStyle(
                   fontWeight: FontWeight.bold, 
-                  color: Colors.white10, 
+                  color: const Color.fromARGB(255, 255, 255, 255), 
                   fontSize: MediaQuery.of(context).size.width*0.1),)),
           Padding(
               padding: EdgeInsets.only(
@@ -46,7 +47,7 @@ class InitialScreen extends StatelessWidget {
                 vertical: MediaQuery.of(context).size.height * 0.02,
                 horizontal: MediaQuery.of(context).size.width * 0.03 ),
               child: ElevatedButton(
-                onPressed: () {Navigator.pop
+                onPressed: () {Navigator.push
                   (context, MaterialPageRoute(builder: (context) => const DialogScreen()),);}, 
                 child: Text('Continue',
                   style: TextStyle(

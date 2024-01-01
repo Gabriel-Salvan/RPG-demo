@@ -18,7 +18,7 @@ class DialogScreen extends StatelessWidget {
               right: MediaQuery.of(context).size.width*0.2
             ),
             child:
-              Image.network('',
+              Image.asset('',
               height: MediaQuery.of(context).size.height * 0.45,
               width: MediaQuery.of(context).size.width * 0.25,) ),
           Padding(
@@ -29,13 +29,13 @@ class DialogScreen extends StatelessWidget {
             child:
               ClipRRect(
                 borderRadius: 
-                  BorderRadius.circular(MediaQuery.of(context).size.width* 0.005),
+                  BorderRadius.circular(MediaQuery.of(context).size.width* 0.02),
                 clipBehavior: Clip.hardEdge,
                 child:
                   Container(
                     height: MediaQuery.of(context).size.height*0.3,
                     width: MediaQuery.of(context).size.width*0.6,
-                    color: Color.fromARGB(255, 56, 55, 55),
+                    color: const Color.fromARGB(255, 56, 55, 55),
               )),
               )
             ])

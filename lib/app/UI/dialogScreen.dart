@@ -30,14 +30,18 @@ class DialogScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: 
                   BorderRadius.circular(MediaQuery.of(context).size.width* 0.02),
-                clipBehavior: Clip.hardEdge,
                 child:
                   Container(
                     height: MediaQuery.of(context).size.height*0.3,
                     width: MediaQuery.of(context).size.width*0.6,
-                    color: const Color.fromARGB(255, 56, 55, 55),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromARGB(255, 56, 55, 55),
+                        width: MediaQuery.of(context).size.width * 0.01),
+                        borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
+                      )
+                    ),
               )),
-              )
             ])
       )
     );

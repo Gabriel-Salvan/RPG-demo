@@ -18,7 +18,7 @@ class DialogScreen extends StatelessWidget {
               right: MediaQuery.of(context).size.width*0.2
             ),
             child:
-              Image.asset('',
+              Image.asset('lib/assets/example.png',
               height: MediaQuery.of(context).size.height * 0.45,
               width: MediaQuery.of(context).size.width * 0.25,) ),
           Padding(

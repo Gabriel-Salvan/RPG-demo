@@ -1,8 +1,12 @@
 
 import 'package:flutter/material.dart';
 
-class DialogScreen extends StatelessWidget {
-  const DialogScreen({super.key});
+import 'opt1Route.dart';
+
+import 'opt2Route.dart';
+
+class DialogScreen1 extends StatelessWidget {
+  const DialogScreen1({super.key});
 
   @override
 
@@ -39,7 +43,25 @@ class DialogScreen extends StatelessWidget {
                         color: const Color.fromARGB(255, 56, 55, 55),
                         width: MediaQuery.of(context).size.width * 0.01),
                         borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
-                      )
+                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                          onPressed: (){Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => const Opt1Route(),));}, 
+                          child: Container(
+                            color: const Color.fromARGB(255, 52, 73, 82),
+                            child:const Text('Option 1')
+                            )),
+                        ElevatedButton(
+                          onPressed: (){Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => const Opt2Route(),));},
+                          child: Container(
+                            color: const Color.fromARGB(255, 52, 73, 82),
+                            child:const Text('Option 2'),
+                            ))
+                      ],),
                     ),
               )),
             ])

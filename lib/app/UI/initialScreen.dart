@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'dialogScreen.dart';
+import 'dialogScreen1.dart';
 
 class InitialScreen extends StatelessWidget {
   const InitialScreen({super.key});
@@ -48,7 +48,7 @@ class InitialScreen extends StatelessWidget {
                 horizontal: MediaQuery.of(context).size.width * 0.03 ),
               child: ElevatedButton(
                 onPressed: () {Navigator.push
-                  (context, MaterialPageRoute(builder: (context) => const DialogScreen()),);}, 
+                  (context, MaterialPageRoute(builder: (context) => const DialogScreen1()),);}, 
                 child: Text('Continue',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.width*0.03,

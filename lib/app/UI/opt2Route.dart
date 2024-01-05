@@ -27,7 +27,7 @@ class _MyHomePageState extends State<Opt2Route> {
         currentIndex++;
       });
 
-      Future.delayed(const Duration(milliseconds: 50), () {
+      Future.delayed(const Duration(milliseconds: 30), () {
         _animateText();
       });
     }
@@ -68,10 +68,10 @@ class _MyHomePageState extends State<Opt2Route> {
                     borderRadius: BorderRadius.circular(
                         MediaQuery.of(context).size.width * 0.02),
                   ),
-                  child: Row(
+                  child: SingleChildScrollView(child: Column(
                     children: [
                       Align(
-                          alignment: Alignment.topRight,
+                          alignment: Alignment.topLeft,
                           child: Text(textToShow,
                               style: TextStyle(
                                   fontSize: MediaQuery.of(context).size.width *
@@ -88,9 +88,9 @@ class _MyHomePageState extends State<Opt2Route> {
                             },
                             child: Container(
                                 color: const Color.fromARGB(255, 52, 73, 82),
-                                child: const Text('Option 1'))),
+                                child: const Icon(Icons.arrow_forward))),
                       )
-                    ],
+                    ],)
                   ),
                 ),
               )),

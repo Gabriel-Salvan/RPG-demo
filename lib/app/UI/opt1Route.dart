@@ -27,7 +27,7 @@ class _MyHomePageState extends State<Opt1Route> {
         currentIndex++;
       });
 
-      Future.delayed(const Duration(milliseconds: 50), () {
+      Future.delayed(const Duration(milliseconds: 30), () {
         _animateText();
       });
     }
@@ -68,31 +68,32 @@ class _MyHomePageState extends State<Opt1Route> {
                     borderRadius: BorderRadius.circular(
                         MediaQuery.of(context).size.width * 0.02),
                   ),
-                  child: Row(
-                    children: [
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: Text(
-                          textToShow,
-                          style:TextStyle(fontSize:MediaQuery.of(context).size.width*0.02) )
+                  child: SingleChildScrollView(
+                    child: Column(
+                        children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            textToShow,
+                            style:TextStyle(fontSize:MediaQuery.of(context).size.width*0.02) )
                       ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Opt1Route(),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Opt1Route(),
                                   ));
                             },
-                            child: Container(
-                                color: const Color.fromARGB(255, 52, 73, 82),
-                                child: const Text('Option 1'))),
+                              child: Container(
+                                  color: const Color.fromARGB(255, 52, 73, 82),
+                                  child: const Icon(Icons.arrow_forward))),
                       )
                     ],
                   ),
-                ),
+                ),)
               )),
         ])));
   }

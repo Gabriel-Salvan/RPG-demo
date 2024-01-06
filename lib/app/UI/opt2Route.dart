@@ -45,7 +45,7 @@ class _MyHomePageState extends State<Opt2Route> {
                   left: MediaQuery.of(context).size.width * 0.45,
                   right: MediaQuery.of(context).size.width * 0.2),
               child: Image.asset(
-                'lib/assets/example.png',
+                'lib/assets/images/example.png',
                 height: MediaQuery.of(context).size.height * 0.45,
                 width: MediaQuery.of(context).size.width * 0.25,
               )),
@@ -74,8 +74,9 @@ class _MyHomePageState extends State<Opt2Route> {
                           alignment: Alignment.topLeft,
                           child: Text(textToShow,
                               style: TextStyle(
-                                  fontSize: MediaQuery.of(context).size.width *
-                                      0.02))),
+                                  fontSize: MediaQuery.of(context).size.width *0.02,
+                                  fontFamily: '8BitOperatorJVE')
+                                  )),
                       Align(
                         alignment: Alignment.bottomRight,
                         child: ElevatedButton(

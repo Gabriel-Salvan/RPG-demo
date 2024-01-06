@@ -45,7 +45,7 @@ class _MyHomePageState extends State<Opt1Route> {
                   left: MediaQuery.of(context).size.width * 0.45,
                   right: MediaQuery.of(context).size.width * 0.2),
               child: Image.asset(
-                'lib/assets/example.png',
+                'lib/assets/images/example.png',
                 height: MediaQuery.of(context).size.height * 0.45,
                 width: MediaQuery.of(context).size.width * 0.25,
               )),
@@ -75,7 +75,10 @@ class _MyHomePageState extends State<Opt1Route> {
                           alignment: Alignment.topLeft,
                           child: Text(
                             textToShow,
-                            style:TextStyle(fontSize:MediaQuery.of(context).size.width*0.02) )
+                            style:TextStyle(
+                              fontSize:MediaQuery.of(context).size.width*0.02,
+                              fontFamily: '8BitOperatorJVE'),
+                             )
                       ),
                         Align(
                           alignment: Alignment.bottomRight,

@@ -53,7 +53,12 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-  - lib/assets/
+    - lib/assets/images/
+    - lib/assets/fonts/
+  fonts:
+    - family: 8BitOperatorJVE
+      fonts:
+        - asset: lib/assets/fonts/8bitoperator_jve.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

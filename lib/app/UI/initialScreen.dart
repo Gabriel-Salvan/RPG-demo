@@ -19,9 +19,10 @@ class InitialScreen extends StatelessWidget {
               child: Text("Welcome", 
                 maxLines: 1, 
                 style: TextStyle(
-                  fontWeight: FontWeight.bold, 
+                  fontWeight: FontWeight.normal, 
                   color: const Color.fromARGB(255, 255, 255, 255), 
-                  fontSize: MediaQuery.of(context).size.width*0.1),)),
+                  fontSize: MediaQuery.of(context).size.width*0.1,
+                  fontFamily: '8BitOperatorJVE'),)),
           Padding(
               padding: EdgeInsets.only(
                 left:MediaQuery.of(context).size.width * 0.2,

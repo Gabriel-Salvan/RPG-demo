@@ -1,16 +1,19 @@
 
 import 'package:flutter/material.dart';
 
-class Opt1Route extends StatefulWidget{
-  const Opt1Route({super.key});
+import 'dialogScreen1.dart';
 
-  @override
+class IntroductionScreen extends StatefulWidget {
+  const IntroductionScreen({super.key});
+
+@override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<Opt1Route> {
+class _MyHomePageState extends State<IntroductionScreen> {
   String textToShow = "";
-  String fullText = "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
+  String fullText =
+      "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
   int currentIndex = 0;
 
   @override
@@ -31,7 +34,7 @@ class _MyHomePageState extends State<Opt1Route> {
       });
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,19 +43,10 @@ class _MyHomePageState extends State<Opt1Route> {
             children: ([
           Padding(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.2,
-                  left: MediaQuery.of(context).size.width * 0.45,
-                  right: MediaQuery.of(context).size.width * 0.2),
-              child: Image.asset(
-                'lib/assets/images/example.png',
-                height: MediaQuery.of(context).size.height * 0.45,
-                width: MediaQuery.of(context).size.width * 0.25,
-              )),
-          Padding(
-              padding: EdgeInsets.only(
                 right: MediaQuery.of(context).size.width * 0.2,
                 left: MediaQuery.of(context).size.width * 0.2,
                 bottom: MediaQuery.of(context).size.height * 0.05,
+                top: MediaQuery.of(context).size.height* 0.65,
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(
@@ -68,34 +62,32 @@ class _MyHomePageState extends State<Opt1Route> {
                         MediaQuery.of(context).size.width * 0.02),
                   ),
                   child: SingleChildScrollView(
-                    child: Column(
-                        children: [
-                        Align(
+                      child: Column(
+                    children: [
+                      Align(
                           alignment: Alignment.topLeft,
-                          child: Text(
-                            textToShow,
-                            style:TextStyle(
-                              fontSize:MediaQuery.of(context).size.width*0.02,
-                              fontFamily: '8BitOperatorJVE'),
-                             )
-                      ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Opt1Route(),
+                          child: Text(textToShow,
+                              style: TextStyle(
+                                  fontSize:
+                                      MediaQuery.of(context).size.width * 0.02,
+                                  fontFamily: '8BitOperatorJVE'))),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const DialogScreen1(),
                                   ));
                             },
-                              child: Container(
-                                  color: const Color.fromARGB(255, 52, 73, 82),
-                                  child: const Icon(Icons.arrow_forward))),
+                            child: Container(
+                                color: const Color.fromARGB(255, 52, 73, 82),
+                                child: const Icon(Icons.arrow_forward))),
                       )
                     ],
-                  ),
-                ),)
+                  )),
+                ),
               )),
         ])));
   }

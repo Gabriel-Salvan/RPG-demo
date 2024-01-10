@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'opt5Route.dart';
-import 'opt6Route.dart';
+import 'opt3Route.dart';
+import 'opt4Route.dart';
 
-class DialogScreenRoute2 extends StatelessWidget {
-  const DialogScreenRoute2({super.key});
+class DialogScreenRoute3 extends StatelessWidget {
+  const DialogScreenRoute3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,23 +48,23 @@ class DialogScreenRoute2 extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Opt5Route(),
+                                  builder: (context) => const Opt3Route(),
                                 ));
                           },
                           child: Container(
                               color: const Color.fromARGB(255, 52, 73, 82),
-                              child: const Text('Option 5'))),
+                              child: const Text('Option 1'))),
                       ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Opt6Route(),
+                                  builder: (context) => const Opt4Route(),
                                 ));
                           },
                           child: Container(
                             color: const Color.fromARGB(255, 52, 73, 82),
-                            child: const Text('Option 6'),
+                            child: const Text('Option 2'),
                           )),
                     ],
                   ),

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'dialogScreenRoute2.dart';
 
 class Opt2Route extends StatefulWidget {
   const Opt2Route({super.key});
@@ -12,7 +13,7 @@ class Opt2Route extends StatefulWidget {
 class _MyHomePageState extends State<Opt2Route> {
   String textToShow = "";
   String fullText =
-      "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
+      "opt2 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
   int currentIndex = 0;
 
   @override
@@ -85,7 +86,7 @@ class _MyHomePageState extends State<Opt2Route> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const Opt2Route(),
+                                    builder: (context) => const DialogScreenRoute2(),
                                   ));
                             },
                             child: Container(

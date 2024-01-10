@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:rpgdemo/app/UI/dialogScreenRoute1.dart';
 
 class Opt1Route extends StatefulWidget{
   const Opt1Route({super.key});
@@ -10,7 +11,7 @@ class Opt1Route extends StatefulWidget{
 
 class _MyHomePageState extends State<Opt1Route> {
   String textToShow = "";
-  String fullText = "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
+  String fullText = "opt1 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
   int currentIndex = 0;
 
   @override
@@ -86,7 +87,7 @@ class _MyHomePageState extends State<Opt1Route> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const Opt1Route(),
+                                      builder: (context) => const DialogScreenRoute1(),
                                   ));
                             },
                               child: Container(

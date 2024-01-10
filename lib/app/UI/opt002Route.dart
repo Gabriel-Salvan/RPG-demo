@@ -1,16 +1,16 @@
 
 import 'package:flutter/material.dart';
-import 'dialogScreenRoute2.dart';
+import 'dialogScreenRoute002.dart';
 
-class Opt2Route extends StatefulWidget {
-  const Opt2Route({super.key});
+class Opt002Route extends StatefulWidget {
+  const Opt002Route({super.key});
 
 
 @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<Opt2Route> {
+class _MyHomePageState extends State<Opt002Route> {
   String textToShow = "";
   String fullText =
       "opt2 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<Opt2Route> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const DialogScreenRoute2(),
+                                    builder: (context) => const DialogScreenRoute002(),
                                   ));
                             },
                             child: Container(

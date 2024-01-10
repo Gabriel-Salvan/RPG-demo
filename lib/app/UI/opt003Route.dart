@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:rpgdemo/app/UI/dialogScreenRoute4.dart';
+import 'package:rpgdemo/app/UI/dialogScreenRoute003.dart';
 
-class Opt4Route extends StatefulWidget {
-  const Opt4Route({super.key});
+class Opt003Route extends StatefulWidget {
+  const Opt003Route({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<Opt4Route> {
+class _MyHomePageState extends State<Opt003Route> {
   String textToShow = "";
   String fullText =
-      "opt4 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
+      "opt3 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
   int currentIndex = 0;
 
   @override
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<Opt4Route> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const DialogScreenRoute4(),
+                                            const DialogScreenRoute003(),
                                       ));
                                 },
                                 child: Container(

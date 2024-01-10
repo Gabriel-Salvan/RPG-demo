@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'opt3Route.dart';
-import 'opt4Route.dart';
+import 'opt003Route.dart';
+import 'opt004Route.dart';
 
-class DialogScreenRoute4 extends StatelessWidget {
-  const DialogScreenRoute4({super.key});
+class DialogScreenRoute006 extends StatelessWidget {
+  const DialogScreenRoute006({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class DialogScreenRoute4 extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Opt3Route(),
+                                  builder: (context) => const Opt003Route(),
                                 ));
                           },
                           child: Container(
@@ -59,7 +59,7 @@ class DialogScreenRoute4 extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Opt4Route(),
+                                  builder: (context) => const Opt004Route(),
                                 ));
                           },
                           child: Container(

@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'opt1Route.dart';
+import 'opt001Route.dart';
 
-import 'opt2Route.dart';
+import 'opt002Route.dart';
 
 class DialogScreen1 extends StatelessWidget {
   const DialogScreen1({super.key});
@@ -49,14 +49,14 @@ class DialogScreen1 extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           onPressed: (){Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => const Opt1Route(),));}, 
+                            context, MaterialPageRoute(builder: (context) => const Opt001Route(),));}, 
                           child: Container(
                             color: const Color.fromARGB(255, 52, 73, 82),
                             child:const Text('Option 1')
                             )),
                         ElevatedButton(
                           onPressed: (){Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => const Opt2Route(),));},
+                            context, MaterialPageRoute(builder: (context) => const Opt002Route(),));},
                           child: Container(
                             color: const Color.fromARGB(255, 52, 73, 82),
                             child:const Text('Option 2'),

@@ -1,39 +1,11 @@
-
 import 'package:flutter/material.dart';
-import 'dialogScreenRoute002.dart';
+import '../Models/list.dart';
+import '../Models/models.dart';
+import 'pageSelector.dart';
 
-class Opt002Route extends StatefulWidget {
-  const Opt002Route({super.key});
-
-
-@override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<Opt002Route> {
-  String textToShow = "";
-  String fullText =
-      "opt2 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
-  int currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _animateText();
-  }
-
-  _animateText() {
-    if (currentIndex < fullText.length) {
-      setState(() {
-        textToShow += fullText[currentIndex];
-        currentIndex++;
-      });
-
-      Future.delayed(const Duration(milliseconds: 30), () {
-        _animateText();
-      });
-    }
-  }
+class ButtonPageView extends StatelessWidget {
+  final ButtonPage page;
+  const ButtonPageView({super.key, required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +19,7 @@ class _MyHomePageState extends State<Opt002Route> {
                   left: MediaQuery.of(context).size.width * 0.45,
                   right: MediaQuery.of(context).size.width * 0.2),
               child: Image.asset(
-                'lib/assets/images/example.png',
+                page.imagePath,
                 height: MediaQuery.of(context).size.height * 0.45,
                 width: MediaQuery.of(context).size.width * 0.25,
               )),
@@ -70,30 +42,39 @@ class _MyHomePageState extends State<Opt002Route> {
                     borderRadius: BorderRadius.circular(
                         MediaQuery.of(context).size.width * 0.02),
                   ),
-                  child: SingleChildScrollView(child: Column(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Align(
-                          alignment: Alignment.topLeft,
-                          child: Text(textToShow,
-                              style: TextStyle(
-                                  fontSize: MediaQuery.of(context).size.width *0.02,
-                                  fontFamily: '8BitOperatorJVE')
-                                  )),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: ElevatedButton(
-                            onPressed: () {
+                      ElevatedButton(
+                          onPressed: () {
+                            if (routes[page.button1.routeToGo] != null) {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const DialogScreenRoute002(),
+                                    builder: (context) => PageSelector(
+                                        route: page.button1.routeToGo),
                                   ));
-                            },
-                            child: Container(
-                                color: const Color.fromARGB(255, 52, 73, 82),
-                                child: const Icon(Icons.arrow_forward))),
-                      )
-                    ],)
+                            }
+                          },
+                          child: Container(
+                              color: const Color.fromARGB(255, 52, 73, 82),
+                              child: Text(page.button1.buttonText))),
+                      ElevatedButton(
+                          onPressed: () {
+                            if (routes[page.button2.routeToGo] != null) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => PageSelector(
+                                        route: page.button2.routeToGo),
+                                  ));
+                            }
+                          },
+                          child: Container(
+                            color: const Color.fromARGB(255, 52, 73, 82),
+                            child: Text(page.button2.buttonText),
+                          )),
+                    ],
                   ),
                 ),
               )),

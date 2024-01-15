@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:rpgdemo/app/UI/dialogScreenRoute004.dart';
+import 'package:rpgdemo/app/UI/pageSelector.dart';
+import '../Models/list.dart';
+import '../Models/models.dart';
 
-class Opt004Route extends StatefulWidget {
-  const Opt004Route({super.key});
+class RollingText extends StatefulWidget {
+  final TextPage textPage;
+  const RollingText({super.key, required this.textPage});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<Opt004Route> {
+class _MyHomePageState extends State<RollingText> {
   String textToShow = "";
-  String fullText =
-      "opt4 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla";
+  String fullText = "";
   int currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
+    fullText = widget.textPage.textToShow;
     _animateText();
   }
 
@@ -85,12 +88,15 @@ class _MyHomePageState extends State<Opt004Route> {
                             alignment: Alignment.bottomRight,
                             child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            const DialogScreenRoute004(),
-                                      ));
+                                  if (routes[widget.textPage.routeToGo] !=
+                                      null) {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => PageSelector(
+                                              route: widget.textPage.routeToGo),
+                                        ));
+                                  }
                                 },
                                 child: Container(
                                     color:

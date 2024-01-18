@@ -40,4 +40,8 @@ Map<int, Page> routes = {
       textToShow:
           "Ao ver o burro sofrer mais do que ele já estava, você se enche de culpa e tenta ajudar...",
       routeToGo: 4),
+  11: ButtonPage(
+      button1: ButtonToNavigate(buttonText: "Text 11", routeToGo: 1),
+      button2: ButtonToNavigate(buttonText: "Text 11", routeToGo: 1,),
+      imagePath: "lib/assets/images/example.png"),
 };

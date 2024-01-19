@@ -5,6 +5,7 @@ abstract class Page {
 // TextPage class implementing Page interface
 class TextPage implements Page {
   final String textToShow;
+  @override
   final String imagePath;
   final int routeToGo;
 
@@ -17,6 +18,7 @@ class TextPage implements Page {
 
 // ButtonPage class implementing Page interface
 class ButtonPage implements Page {
+  @override
   final String imagePath;
   final ButtonToNavigate button1;
   final ButtonToNavigate button2;

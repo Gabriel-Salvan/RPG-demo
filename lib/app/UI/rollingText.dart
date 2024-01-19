@@ -48,7 +48,7 @@ class _MyHomePageState extends State<RollingText> {
                   left: MediaQuery.of(context).size.width * 0.45,
                   right: MediaQuery.of(context).size.width * 0.2),
               child: Image.asset(
-                'lib/assets/images/example.png',
+                widget.textPage.imagePath,
                 height: MediaQuery.of(context).size.height * 0.45,
                 width: MediaQuery.of(context).size.width * 0.25,
               )),
@@ -87,6 +87,9 @@ class _MyHomePageState extends State<RollingText> {
                           Align(
                             alignment: Alignment.bottomRight,
                             child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(255, 52, 73, 82)
+                                ),
                                 onPressed: () {
                                   if (routes[widget.textPage.routeToGo] !=
                                       null) {
@@ -98,10 +101,7 @@ class _MyHomePageState extends State<RollingText> {
                                         ));
                                   }
                                 },
-                                child: Container(
-                                    color:
-                                        const Color.fromARGB(255, 52, 73, 82),
-                                    child: const Icon(Icons.arrow_forward))),
+                                child: const Icon(Icons.arrow_forward)),
                           )
                         ],
                       ),

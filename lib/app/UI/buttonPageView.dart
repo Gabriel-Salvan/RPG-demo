@@ -50,8 +50,8 @@ class ButtonPageView extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(
                                 top:MediaQuery.of(context).size.height * 0.014,
-                                left:MediaQuery.of(context).size.width* 0.1,
-                                right:MediaQuery.of(context).size.width* 0.1,),
+                                left:MediaQuery.of(context).size.width* 0.025,
+                                right:MediaQuery.of(context).size.width* 0.025,),
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color.fromARGB(255, 52, 73, 82)
@@ -66,12 +66,12 @@ class ButtonPageView extends StatelessWidget {
                                         ));
                                   }
                                 },
-                                child: Text(page.button1.buttonText)),
+                                child: Center(child: Text(page.button1.buttonText))),
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(
                               vertical: MediaQuery.of(context).size.height*0.014,
-                              horizontal: MediaQuery.of(context).size.width* 0.1), 
+                              horizontal: MediaQuery.of(context).size.width* 0.025), 
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color.fromARGB(255, 52, 73, 82)
@@ -86,7 +86,7 @@ class ButtonPageView extends StatelessWidget {
                                         ));
                                   }
                                 },
-                                child: Text(page.button2.buttonText)),
+                                child: Center(child: Text(page.button2.buttonText))),
                         ),
                         ],
                       ),

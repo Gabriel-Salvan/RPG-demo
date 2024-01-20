@@ -86,22 +86,28 @@ class _MyHomePageState extends State<RollingText> {
                               )),
                           Align(
                             alignment: Alignment.bottomRight,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color.fromARGB(255, 52, 73, 82)
-                                ),
-                                onPressed: () {
-                                  if (routes[widget.textPage.routeToGo] !=
-                                      null) {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => PageSelector(
-                                              route: widget.textPage.routeToGo),
-                                        ));
-                                  }
-                                },
-                                child: const Icon(Icons.arrow_forward)),
+                            child: Padding(
+                              padding:EdgeInsets.symmetric(
+                                horizontal:MediaQuery.of(context).size.width*0.02 ,
+                                vertical:MediaQuery.of(context).size.height*0.014 ,
+                              ),
+                              child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color.fromARGB(255, 52, 73, 82)
+                                  ),
+                                  onPressed: () {
+                                    if (routes[widget.textPage.routeToGo] !=
+                                        null) {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => PageSelector(
+                                                route: widget.textPage.routeToGo),
+                                          ));
+                                    }
+                                  },
+                                  child: const Icon(Icons.arrow_forward)),
+                            ),
                           )
                         ],
                       ),

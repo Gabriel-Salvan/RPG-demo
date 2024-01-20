@@ -2,6 +2,20 @@ abstract class Page {
   String get imagePath;
 }
 
+// EndPage class implementing Page interface
+class EndPage implements Page {
+  final String textToShow1;
+  final String textToShow2;
+  @override
+  final String imagePath;
+
+  EndPage({
+    required this.textToShow1,
+    required this.textToShow2,
+    required this.imagePath,
+  });
+}
+
 // TextPage class implementing Page interface
 class TextPage implements Page {
   final String textToShow;

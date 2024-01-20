@@ -1,6 +1,10 @@
 import 'package:rpgdemo/app/Models/models.dart';
 
 Map<int, Page> routes = {
+  123456789:EndPage(
+      imagePath: "lib/assets/images/example.png",
+      textToShow1: "YEAHEEE u finished game",
+      textToShow2: ""),
   1: TextPage(
       imagePath: "lib/assets/images/example.png",
       textToShow: "Você está a caminho da cafeteria do seu melhor amigo Clebinho, quando algo atrapalha seu caminho.",
@@ -30,11 +34,11 @@ Map<int, Page> routes = {
       textToShow:
           "Após ver seu comentário, ele continua chorando, mas com intensidade que você nunca havia visto antes.",
       routeToGo: 9),
-  9: TextPage(
+  9: EndPage(
       imagePath: "lib/assets/images/example.png",
-      textToShow:
-          "A água começa a subir, fazendo com que você se afogue em suas lagrimas.",
-      routeToGo: 6),
+      textToShow1: "Final Depressão",
+      textToShow2:
+          "A água começa a subir, fazendo com que você se afogue em suas lagrimas.",),
   7: TextPage(
       imagePath: "lib/assets/images/example.png",
       textToShow:

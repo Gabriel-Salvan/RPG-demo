@@ -8,7 +8,7 @@ class ButtonPageView extends StatelessWidget {
   const ButtonPageView({super.key, required this.page});
 
   @override
-  Widget build(BusildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: SingleChildScrollView(

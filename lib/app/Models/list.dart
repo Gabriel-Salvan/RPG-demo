@@ -1,10 +1,6 @@
 import 'package:rpgdemo/app/Models/models.dart';
 
 Map<int, Page> routes = {
-  123456789:EndPage(
-      imagePath: "lib/assets/images/example.png",
-      textToShow1: "YEAHEEE u finished game",
-      textToShow2: ""),
   1: TextPage(
       imagePath: "lib/assets/images/example.png",
       textToShow: "Você está a caminho da cafeteria do seu melhor amigo Clebinho, quando algo atrapalha seu caminho.",

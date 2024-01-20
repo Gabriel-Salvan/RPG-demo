@@ -12,20 +12,44 @@ class InitialScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.1,
               vertical: MediaQuery.of(context).size.height * 0.03),
-          child: Text(
-            "Welcome",
-            maxLines: 1,
-            style: TextStyle(
-                fontWeight: FontWeight.normal,
-                color: const Color.fromARGB(255, 255, 255, 255),
-                fontSize: MediaQuery.of(context).size.width * 0.1,
-                fontFamily: '8BitOperatorJVE'),
+          child: SizedBox(
+            child: Center(
+              child: Text(
+                "Welcome",
+                maxLines: 1,
+                style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    fontSize: MediaQuery.of(context).size.width * 0.1,
+                    fontFamily: '8BitOperatorJVE'),
+              ),
+            ),
           )),
+      Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width*0.1,
+          vertical: MediaQuery.of(context).size.height*0.005
+        ),
+        child: Icon(
+          Icons.screen_rotation,
+          size: MediaQuery.of(context).size.height*0.1,)),
+      Padding(
+        padding: EdgeInsets.only(
+          left: MediaQuery.of(context).size.width*0.3,
+          right: MediaQuery.of(context).size.width * 0.3,
+
+        ),
+        child: Text(
+          "Recomendamos o uso da tela na horizontal para a melhor experiencia",
+          maxLines: 2,
+          style: TextStyle(
+            fontSize: MediaQuery.of(context).size.width*0.02,
+            fontFamily: "8BitOperatorJVE",),)),
       Padding(
           padding: EdgeInsets.only(
               left: MediaQuery.of(context).size.width * 0.2,
-              top: MediaQuery.of(context).size.height * 0.3,
-              right: MediaQuery.of(context).size.width * 0.2),
+              right: MediaQuery.of(context).size.width * 0.2,
+              top: MediaQuery.of(context).size.height*0.05),
           child: ClipRRect(
             borderRadius:
                 BorderRadius.circular(MediaQuery.of(context).size.width * 0.02),
@@ -37,7 +61,7 @@ class InitialScreen extends StatelessWidget {
               child: TextField(
                 maxLines: 1,
                 decoration: const InputDecoration(
-                    labelText: ('Whats your name adventurer?')),
+                    labelText: ('Qual teu nome mermão???')),
                 style: TextStyle(
                     fontSize: MediaQuery.of(context).size.width * 0.02,
                     fontStyle: FontStyle.italic,

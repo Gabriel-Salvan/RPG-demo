@@ -12,18 +12,14 @@ class InitialScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.1,
               vertical: MediaQuery.of(context).size.height * 0.03),
-          child: SizedBox(
-            child: Center(
-              child: Text(
-                "Welcome",
-                maxLines: 1,
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    fontSize: MediaQuery.of(context).size.width * 0.1,
-                    fontFamily: '8BitOperatorJVE'),
-              ),
-            ),
+          child: Text(
+            "Welcome",
+            maxLines: 1,
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                color: const Color.fromARGB(255, 255, 255, 255),
+                fontSize: MediaQuery.of(context).size.width * 0.1,
+                fontFamily: '8BitOperatorJVE'),
           )),
       Padding(
         padding: EdgeInsets.symmetric(
@@ -89,7 +85,15 @@ class InitialScreen extends StatelessWidget {
                   fontSize: MediaQuery.of(context).size.width * 0.03,
                   fontWeight: FontWeight.bold),
             )),
-      )
+      ),
+      Padding(
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.05),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Column(
+            children: [
+              Text("Made by: @g.s.salvan"),
+              Text("Arts by: @senhorr_barata")],)))
     ]));
   }
 }

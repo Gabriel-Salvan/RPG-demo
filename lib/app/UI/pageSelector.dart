@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpgdemo/app/UI/endPageView.dart';
 import 'package:rpgdemo/app/UI/errorPage.dart';
 
 import '../Models/list.dart';
@@ -23,8 +24,11 @@ class _PageSelectorState extends State<PageSelector> {
       return ButtonPageView(
         page: routes[widget.route] as ButtonPage,
       );
+    } else if (routes[widget.route]is EndPage) {
+      return EndPageView(page: routes[widget.route] as EndPage
+      );
     } else {
       return const ErrorPage();
-    }
+    } 
   }
 }
